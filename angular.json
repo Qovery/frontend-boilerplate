@@ -1,4 +1,7 @@
 {
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "projects": {
     "tech": {
@@ -119,6 +122,32 @@
       },
       "tags": [],
       "implicitDependencies": ["tech"]
+    },
+    "tech-interview": {
+      "projectType": "library",
+      "root": "libs/tech-interview",
+      "sourceRoot": "libs/tech-interview/src",
+      "prefix": "tech-interview",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tech-interview"],
+          "options": {
+            "jestConfig": "libs/tech-interview/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tech-interview/src/**/*.ts",
+              "libs/tech-interview/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
