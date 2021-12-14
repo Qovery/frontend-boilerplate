@@ -34,7 +34,7 @@ RxJS is a library for reactive programming using Observables, to make it easier 
 https://rxjs.dev/
 
 # Starting the project
-```aidl
+```
 npm i
 nx serve
 ```
