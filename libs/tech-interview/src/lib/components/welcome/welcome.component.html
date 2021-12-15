@@ -1,3 +1,10 @@
 <h1>Tech Interview</h1>
 
 <!-- Todo: Displaying the todo in a list -->
+<ul *ngIf="!todoService.snapshot.loading; else loading">
+  <li *ngFor="let todo of todoService.selectAll()" (click)="getUser(todo)">{{ todo.title }} {{ todo.user?.username }}</li>
+</ul>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
